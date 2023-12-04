@@ -11,7 +11,7 @@ export default function Home() {
     }, 1000);
   }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col text-red-500 items-center justify-center p-24">
       <div>{res}</div>
     </main>
   );

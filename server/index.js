@@ -3,7 +3,7 @@ import cors from 'cors'
 const app = express()
 app.use(cors())
 app.get(('/'),(req,res)=> {
-    res.send({ msg: 'CONNECT SERVER TO CLIENT' });
+    res.send({ msg: 'CONNECT SERVER TO CLIENT WHIT VERCEL OK' });
 })
 app.listen(5000, () => {
    console.log(`start sever at port :5000`);
