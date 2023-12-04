@@ -5,7 +5,7 @@ export default function Home() {
   const [res, setRes] = useState('loading...');
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/api/')
+      fetch('http://localhost:5000')
         .then((res) => res.json())
         .then((res) => setRes(res.msg));
     }, 1000);
