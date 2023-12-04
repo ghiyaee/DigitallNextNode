@@ -9,7 +9,7 @@ export default function Home() {
       fetch('http://localhost:5000/api/')
         .then((res) => res.json())
         .then((res) => setRes(res.msg));
-   },2000)
+   },1000)
   },[])
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
