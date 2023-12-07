@@ -1,18 +1,7 @@
-'use client';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Header from './componets/layout/Header';
+
 export default function Home() {
-  const [res, setRes] = useState('loading...');
-  useEffect(() => {
-    setTimeout(() => {
-      fetch('http://localhost:5000')
-        .then((res) => res.json())
-        .then((res) => setRes(res.msg));
-    }, 1000);
-  }, []);
   return (
-    <main className="flex min-h-screen flex-col text-red-500 items-center justify-center p-24">
-      <div>{res}</div>
-    </main>
+    <Header/>
   );
 }
