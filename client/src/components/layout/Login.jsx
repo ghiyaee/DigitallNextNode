@@ -7,14 +7,22 @@ function Login() {
   async function handelLogin(data) {
     'use server';
     let email = data.get('email')?.valueOf();
+    let password = data.get('password')?.valueOf();
+    let success = false;
     try {
       dbConnect();
       const user = await User.findOne({ email: email });
-      if (user === email) {
-       redirect('/dashboard');
-     }
+      console.log(user);
+      if (user.email === email) {
+        if (user.password === password) success = true;
+      }
+      throw user == null;
     } catch (error) {
-      console.log(error);
+      redirect('/register');
+    } finally {
+      if (success) {
+        redirect('/dashboard');
+      }
     }
   }
 
@@ -34,7 +42,9 @@ function Login() {
           required
           placeholder="پسورد"
           className="p-4 text-center bg-gray-200 outline-none "
+          name="password"
         />
+        {}
         <button className="bg-primary text-white p-4">ورود</button>
       </form>
       <p>
