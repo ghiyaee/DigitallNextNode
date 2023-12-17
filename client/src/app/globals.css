@@ -5,3 +5,6 @@
 .rtl-tag{
     direction:rtl;
 }
+.styleSahdow{
+  box-shadow:  2px 0 2px 2 rgba(0, 0, 0, 0.2)
+}
