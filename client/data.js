@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      id: 1,
+      id:1,
       name: 'appel',
       slug: 'appel',
       category: 'mobile',
@@ -14,7 +14,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 2,
+    id:2,
       name: 'sam',
       slug: 'sam',
       category: 'mobile',
@@ -27,7 +27,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 3,
+    id:3,
       name: 'moto',
       slug: 'moto',
       category: 'mobile',
@@ -40,7 +40,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 4,
+      id:4,
       name: 'moto',
       slug: 'moto',
       category: 'mobile',
@@ -53,7 +53,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 5,
+     id:5,
       name: 'appel',
       slug: 'appel',
       category: 'mobile',
@@ -66,7 +66,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 6,
+      id:6,
       name: 'sam',
       slug: 'sam',
       category: 'mobile',
@@ -79,7 +79,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 7,
+      id:7,
       name: 'moto',
       slug: 'moto',
       category: 'mobile',
@@ -92,7 +92,7 @@ const data = {
       description: 'hight quality',
     },
     {
-      id: 8,
+     id:8,
       name: 'moto',
       slug: 'moto',
       category: 'mobile',

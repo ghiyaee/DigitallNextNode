@@ -10,7 +10,7 @@ function Login() {
     let password = data.get('password')?.valueOf();
     let success = false;
     try {
-      dbConnect();
+      // dbConnect();
       const user = await User.findOne({ email: email });
       console.log(user);
       if (user.email === email) {
@@ -27,7 +27,7 @@ function Login() {
   }
 
   return (
-    <section className=" flex flex-col items-center ">
+    <section className=" flex flex-col items-center  ">
       <h1 className="">فرم ورود</h1>
       <form action={handelLogin} className="flex flex-col w-96 gap-4 p-4">
         <input

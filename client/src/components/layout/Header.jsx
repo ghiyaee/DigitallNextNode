@@ -20,13 +20,13 @@ function Header() {
           درباره ما
         </Link>
         <Link href={'/'} className="hidden md:block">
-          تماس بام ما
+          تماس باما
         </Link>
         <Link
           href={'/login'}
           className="bg-primary text-white px-8 py-2 rounded-full"
         >
-          ورود/ثبت نام
+          ورود / ثبت نام
         </Link>
       </nav>
     </header>

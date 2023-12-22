@@ -1,8 +1,7 @@
 import React from 'react';
-
 function SearchBr() {
   return (
-    <section className='mt-4'>
+    <section className='mt-6'>
       <form action="" className="">
         <input
           type="text"

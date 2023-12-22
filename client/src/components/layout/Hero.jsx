@@ -1,22 +1,22 @@
 'use client';
 import Image from 'next/image';
-import SearchBr from './SearchBr';
-import ListProducts from './ListProducts';
 import { useEffect, useState } from 'react';
-const Hero = () => {
-  const imgs = ['/app14.png', '/pixel7.png', '/motorzb.png', '/samflipb.png'];
-  let [img, setImg] = useState(0);
+import data from '../../../data';
+const imgs = ['/app14.png', '/pixel7.png', '/motorzb.png', '/samflipb.png'];
+const Hero = ({ children }) => {
+  let [images, setImages] = useState(imgs);
+  let [index, setIndex] = useState(0);
+  console.log(images.length);
   useEffect(() => {
-    if (img < imgs.length) {
-      setTimeout(() => setImg(img + 1), 3000);
-    } else {
-      setImg(0)
-    }
-  }, [img]);
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <>
-      <SearchBr />
-      <section className=" flex items-center justify-around py-5 my-5 md:my-16">
+      <section className=" flex  items-center justify-around py-5 my-5 md:my-16">
         <div className="py-12">
           <h1 className="sm:text-xl md:text-6xl font-semibold">
             موبایلهای <span className="text-primary">هوشمند</span>
@@ -25,25 +25,28 @@ const Hero = () => {
             کیفیت برتر با بهترین ساختار
           </p>
         </div>
-        <div className="flex  w-36 h-36 md:w-52 md:h-52 relative">
-          {imgs.map((l, i) =>
-            i <= img ? (
-              <Image
-                layout="fill"
-                objectFit="'contain"
-                alt="mobile"
-                src={l}
-                key={i}
-              />
-            ) : (
-             null
-            )
-          )}
+        <div className="flex  justify-center gap-2 duration-1000 w-36 h-36 md:w-52 md:h-52 relative">
+          <Image
+            width={144}
+            height={144}
+            src={images[index]}
+            alt={`Image ${index + 1}`}
+            key={images}
+            priority={''}
+          />
         </div>
       </section>
-      <ListProducts />
+      {children}
     </>
   );
 };
 
 export default Hero;
+
+// if (index < images.length) {
+//   setIndex((prevIndex) => prevIndex + 1);
+//    return images.slice(0, index);
+// } else {
+//   setIndex(0);
+// }
+// index < images.length ? setIndex((prevIndex) => (prevIndex + 1)): setIndex( 0)
