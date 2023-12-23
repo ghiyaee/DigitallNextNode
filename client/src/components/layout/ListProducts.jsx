@@ -1,8 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-// import dbConnect from '@/dbConnect';
-// import Product from '@/models/Products';
- function ListProducts({ products }) {
+import dbConnect from '@/dbConnect';
+import Product from '@/models/Products';
+async function ListProducts() {
+  await dbConnect();
+  const products = await Product.find();
   return (
     <section className="flex flex-col md:flex-row justify-center flex-wrap gap-6 mt-4">
       {products?.map((pro) => (

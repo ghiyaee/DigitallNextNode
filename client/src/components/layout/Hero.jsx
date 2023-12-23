@@ -3,14 +3,13 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import data from '../../../data';
 const imgs = ['/app14.png', '/pixel7.png', '/motorzb.png', '/samflipb.png'];
-const Hero = ({ children }) => {
-  let [images, setImages] = useState(imgs);
+const Hero = ({children}) => {
+  const [images, setImages] = useState(imgs);
   let [index, setIndex] = useState(0);
-  console.log(images.length);
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
+      setIndex((prev) => (prev < images.length-1  ? prev + 1 : 0));
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
