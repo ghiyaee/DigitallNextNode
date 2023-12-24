@@ -1,15 +1,14 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import data from '../../../data';
 const imgs = ['/app14.png', '/pixel7.png', '/motorzb.png', '/samflipb.png'];
 const Hero = ({children}) => {
   const [images, setImages] = useState(imgs);
   let [index, setIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev < images.length-1  ? prev + 1 : 0));
-    }, 3000);
+      setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
+    }, 2000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -31,7 +30,7 @@ const Hero = ({children}) => {
             src={images[index]}
             alt={`Image ${index + 1}`}
             key={images}
-            priority={''}
+            priority={true}
           />
         </div>
       </section>

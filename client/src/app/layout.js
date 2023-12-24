@@ -14,9 +14,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="rtl-tag">
+    <html lang="fa" className="rtl-tag">
       <body
-        className={`${vazirFont.className} bg-gradient-to-tr from-blue-300 to-transparent `}
+        className={`${vazirFont.className} bg-gradient-to-tr from-yellow-300 to-transparent `}
       >
         <main className="max-w-4xl m-auto p-4 flex flex-col ">
           <Header />

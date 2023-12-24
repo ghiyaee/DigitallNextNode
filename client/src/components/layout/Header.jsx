@@ -1,10 +1,9 @@
 import Link from 'next/link';
 function Header() {
   return (
-    <header className=" flex justify-between items-center">
+    <header className=" flex justify-between items-center relative">
       <Link href={'/'} className="text-primary font-semibold md:text-xl">
-        دیجیتال مارکت
-        <span></span>
+        <span className='bg-primary text-white  p-2 rounded-l-full '> دیجیتال مارکت</span>
       </Link>
       <Link href={'/'} className="md:hidden font-semibold text-gray-400">
         MENU
