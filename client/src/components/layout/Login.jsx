@@ -3,6 +3,7 @@ import React from 'react';
 import User from '@/models/User';
 import dbConnect from '@/dbConnect';
 import { redirect } from 'next/navigation';
+import bcrypt from 'bcrypt';
 function Login() {
   async function handelLogin(data) {
     'use server';
@@ -10,11 +11,9 @@ function Login() {
     let password = data.get('password')?.valueOf();
     let success = false;
     try {
-      // dbConnect();
       const user = await User.findOne({ email: email });
-      console.log(user);
       if (user.email === email) {
-        if (user.password === password) success = true;
+        if (bcrypt.compare(user.password,password)) success = true;
       }
       throw user == null;
     } catch (error) {
@@ -27,7 +26,7 @@ function Login() {
   }
 
   return (
-    <section className=" flex flex-col items-center  ">
+    <section className=" flex flex-col items-center mt-10 ">
       <h1 className="">فرم ورود</h1>
       <form action={handelLogin} className="flex flex-col w-96 gap-4 p-4">
         <input
