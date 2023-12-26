@@ -1,6 +1,5 @@
 'use server';
 import User from '@/models/User';
-import { redirect } from 'next/navigation';
 import bcrypt from 'bcrypt';
 const saltRounds = 10;
 async function handelRegister(data) {

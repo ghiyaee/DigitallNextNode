@@ -85,7 +85,6 @@ export default Register;
 //          if (!checkEmail) {
 //            const newUser = new User({ name, email, password: password });
 //            await newUser.save();
-//            redirect('/login');
 //          } else {
 //            console.log('exits email');
 //            return {
