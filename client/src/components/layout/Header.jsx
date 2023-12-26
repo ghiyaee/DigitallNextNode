@@ -1,7 +1,7 @@
 import Link from 'next/link';
 function Header() {
   return (
-    <header className=" flex justify-between items-center relative">
+    <header className=" flex justify-between items-center  ">
       <Link href={'/'} className="text-primary font-semibold md:text-xl">
         <span className='bg-primary text-white  p-2 rounded-l-full '> دیجیتال مارکت</span>
       </Link>

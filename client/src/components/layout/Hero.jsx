@@ -14,12 +14,12 @@ const Hero = ({children}) => {
 
   return (
     <>
-      <section className=" flex  items-center justify-around py-5 my-5 md:my-16">
+      <section className=" flex  items-center justify-around py-5 my-5 md:my-16 bg-primary rounded-lg">
         <div className="py-12">
           <h1 className="sm:text-xl md:text-6xl font-semibold">
-            موبایلهای <span className="text-primary">هوشمند</span>
+            موبایلهای <span className="text-white">هوشمند</span>
           </h1>
-          <p className="mt-4 md:text-xl text-gray-600">
+          <p className="mt-4 md:text-xl text-gray-50">
             کیفیت برتر با بهترین ساختار
           </p>
         </div>

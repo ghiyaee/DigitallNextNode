@@ -33,7 +33,7 @@ function Login() {
           type="email"
           required
           placeholder="ایمیل"
-          className="p-4 text-center bg-gray-200 outline-none "
+          className="p-4 text-center bg-gray-400 outline-none "
           name="email"
         />
         <input

@@ -7,7 +7,7 @@ import Image from 'next/image';
 function Slider() {
   return (
     <>
-      <section className="container m-auto bg-red-500 p-4  rounded-full">
+      <section className="container m-auto bg-primary p-4  rounded-full">
         <p className="text-white text-center text-2xl">محصولات ممتاز</p>
       </section>
       <div className="text-center"></div>
