@@ -41,7 +41,7 @@ function Register() {
           onChange={(e) => setUser(e.target.value.toLowerCase())}
           placeholder="نام کاربری"
           required
-          className="p-4 text-center bg-gray-200 outline-none "
+          className="p-4 text-center bg-yellow-200 outline-none "
         />
         <input
           type="email"
@@ -49,7 +49,7 @@ function Register() {
           onChange={(e) => setEmail(e.target.value.toLowerCase())}
           required
           placeholder="ایمیل"
-          className="p-4 text-center bg-gray-200 outline-none "
+          className="p-4 text-center bg-yellow-200 outline-none "
         />
         <input
           type="password"
@@ -57,7 +57,7 @@ function Register() {
           value={password}
           required
           placeholder="پسورد"
-          className="p-4 text-center bg-gray-200 outline-none "
+          className="p-4 text-center bg-yellow-200 outline-none "
         />
         <button className="bg-primary text-white p-4">ثبت نام</button>
       </form>

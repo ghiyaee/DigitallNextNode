@@ -8,13 +8,13 @@ const Hero = ({children}) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
-    }, 2000);
+    }, 2500);
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
     <>
-      <section className=" flex  items-center justify-around py-5 my-5 md:my-16 bg-primary rounded-lg">
+      <section className=" flex  items-center justify-around py-5 my-5 md:my-0 bg-primary rounded-lg">
         <div className="py-12">
           <h1 className="sm:text-xl md:text-6xl font-semibold">
             موبایلهای <span className="text-white">هوشمند</span>
@@ -23,7 +23,7 @@ const Hero = ({children}) => {
             کیفیت برتر با بهترین ساختار
           </p>
         </div>
-        <div className="flex  justify-center gap-2 duration-1000 w-36 h-36 md:w-52 md:h-52 relative">
+        <div className="flex  justify-center gap-2 w-36 h-36 md:w-52 md:h-52 relative">
           <Image
             width={144}
             height={144}
@@ -31,6 +31,7 @@ const Hero = ({children}) => {
             alt={`Image ${index + 1}`}
             key={images}
             priority={true}
+            className=" transform transition-all duration-[2000s]"
           />
         </div>
       </section>
@@ -41,10 +42,3 @@ const Hero = ({children}) => {
 
 export default Hero;
 
-// if (index < images.length) {
-//   setIndex((prevIndex) => prevIndex + 1);
-//    return images.slice(0, index);
-// } else {
-//   setIndex(0);
-// }
-// index < images.length ? setIndex((prevIndex) => (prevIndex + 1)): setIndex( 0)

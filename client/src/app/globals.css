@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-   margin: 0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.rtl-tag{
-    direction:rtl;
+.rtl-tag {
+  direction: rtl;
 }
-.styleSahdow{
-  box-shadow:  2px 0 2px 2 rgba(0, 0, 0, 0.2)
+.styleSahdow {
+  box-shadow: 2px 0 2px 2 rgba(0, 0, 0, 0.2);
 }

@@ -1,16 +1,14 @@
-import React from 'react';
-import Image from 'next/image';
-import dbConnect from '@/dbConnect';
 import Product from '@/models/Products';
+import Image from 'next/image';
 import Link from 'next/link';
-async function ListProducts() {
-  await dbConnect();
-  const products = await Product.find();
+
+async function CategorySlice({ searchParams }) {
+  const products = await Product.find({ brand: searchParams.value });
   return (
     <section className="flex flex-col md:flex-row justify-center flex-wrap gap-10 mt-0">
       {products?.map((pro) => (
         <div
-          key={pro.id}
+          key={pro._id}
           className=" flex  justify-center items-center gap-8 p-4 
         hover:scale-105 duration-700 rounded-lg 
         shadow-[0_25px_25px_-24px_rgb(0,0,0,0.7)] "
@@ -39,4 +37,4 @@ async function ListProducts() {
   );
 }
 
-export default ListProducts;
+export default CategorySlice;

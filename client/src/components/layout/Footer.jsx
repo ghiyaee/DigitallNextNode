@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div
       className="bg-gradient-to-tr  shadow-[0_25px_25px_-24px_rgb(0,0,0,0.7)]
-     from-yellow-300 rounded-lg to-transparent mt-10 h-[250px]
+     from-yellow-300 rounded-lg to-transparent mt-0 h-[250px]
      flex flex-col md:flex-row gap-2   md:gap-[200px] items-center justify-center"
     >
       <div>
