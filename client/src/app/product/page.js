@@ -1,11 +1,13 @@
 import Product from '@/models/Products';
 import Image from 'next/image';
 import Link from 'next/link';
+import SearchBr from '@/components/layout/SearchBr';
 async function hadelProduct({ searchParams }) {
   const products = await Product.find({ name: searchParams.value });
   console.log(products);
   return (
     <>
+      <SearchBr />
       {products.length > 0 ? (
         <section
           className="flex flex-col md:flex-row
@@ -40,7 +42,7 @@ async function hadelProduct({ searchParams }) {
           ))}
         </section>
       ) : (
-        <div className='text-center'>محصول مورد نظر یافت نشد</div>
+        <div className="text-center">محصول مورد نظر یافت نشد</div>
       )}
     </>
   );

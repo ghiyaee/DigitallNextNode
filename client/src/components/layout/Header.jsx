@@ -12,7 +12,7 @@ function Header() {
         <Link href={'/'} className="hidden md:block">
           خانه
         </Link>
-        <Link href={'/'} className="hidden md:block">
+        <Link href={'/products'} className="hidden md:block">
           محصولات
         </Link>
         <Link href={'/'} className="hidden md:block">

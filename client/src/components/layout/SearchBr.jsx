@@ -10,6 +10,7 @@ function SearchBr() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          setSearchProduct('')
         }}
         className=" flex items-center "
       >
