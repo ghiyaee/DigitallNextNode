@@ -17,7 +17,7 @@ function SearchBr() {
         <input
           type="text"
           className="w-[100%] h-10 border rounded-full outline-none text-center "
-          placeholder=" برند مورد نظر"
+          placeholder=" جستجوکنید"
           onChange={(e) => setSearchProduct(e.target.value.toLocaleLowerCase())}
           value={searchProduct}
         />

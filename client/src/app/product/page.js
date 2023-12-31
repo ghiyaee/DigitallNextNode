@@ -4,7 +4,6 @@ import Link from 'next/link';
 import SearchBr from '@/components/layout/SearchBr';
 async function hadelProduct({ searchParams }) {
   const products = await Product.find({ name: searchParams.value });
-  console.log(products);
   return (
     <>
       <SearchBr />

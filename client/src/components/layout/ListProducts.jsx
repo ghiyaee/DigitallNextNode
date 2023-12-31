@@ -29,7 +29,7 @@ async function ListProducts() {
             <p>قیمت :{pro.price}</p>
             <p>کیفیت :{pro.description}</p>
             <Link href={`/product/${pro.slug}`}>
-              <button className="bg-primary text-white px-6 py-1 rounded-full">
+              <button className="bg-primary text-white px-6 py-1 mt-2 rounded-full">
                 بیشتر...
               </button>
             </Link>
